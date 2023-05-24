@@ -4,6 +4,7 @@ h1, p {
 
 .titleTask{
   font-size: 10px;
+  color: #556788;
 }
 
 .textError{
@@ -23,8 +24,8 @@ h1, p {
 .divider {
   width: 100%;
   height: 3px;
-  background: #0000ff61;
-  border: 1px solid blue;
+  background: #5B9BD5;
+  border: 1px solid #41719C;
   margin-bottom: 10px;
 }
 .card{
@@ -33,15 +34,15 @@ h1, p {
   align-items: center;
   width: 26%;
   margin: 10px 30px;
-  background: #f5f5dcc2;
-  border: 1px solid #00bcd485;
-  border-radius: 20px;
-  padding-bottom: 10px;
+  background: #F2F2F2;
+  border: 1px solid #9ABFE1;
+  border-radius: 15px;
+  padding-bottom: 20px;
 }
 
 .buttontask{
-  background: #7f8dd7;
-  border: 1px solid #0000ff;
+  background: #5B9BD5;
+  border: 1px solid #41719C;
   border-radius: 15px;
   padding: 6px 20px;
   margin: 6px;
@@ -50,8 +51,8 @@ h1, p {
 }
 
 .cardFinish{
-    border: 1px solid #00bcd485;
-    background: #f5f5dcc2;
+    border: 1px solid #9ABFE1;
+    background: #F2F2F2;
     width: 50%;
     padding: 20px;
     display: flex;
