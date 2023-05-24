@@ -1,6 +1,6 @@
-import counterActions from './counterActions'
+import taskActions from './taskActions'
 
 const allActions = {
-    counterActions,
+    taskActions,
 }
 export default allActions

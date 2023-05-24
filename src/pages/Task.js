@@ -8,15 +8,14 @@ const Task = ({ match, history }) => {
 
 
   const handleFinishTask = (id)=>{
-    dispatch(allActions.counterActions.addTask(id));
+    dispatch(allActions.taskActions.addTask(id));
     history.push("/home");
   };
+  
   return (
    <div>
     <h2>task</h2>
-    {taskId}
-    <button onClick={()=>{handleFinishTask(taskId)}}>finalizar Tarea  {taskId} </button>
-
+    <button onClick={()=>{handleFinishTask(taskId)}}>Finalizar tarea #{taskId} </button>
   </div>
 )};
 

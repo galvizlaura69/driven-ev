@@ -1,4 +1,4 @@
-const counter = (state = [], action) => {
+const task = (state = [], action) => {
     switch(action.type){
         case "ADD_TASK":
             const tempList= state;
@@ -9,4 +9,4 @@ const counter = (state = [], action) => {
     }
 }
 
-export default counter
+export default task

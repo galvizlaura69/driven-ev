@@ -1,3 +1,14 @@
 h1, p {
   font-family: Lato;
 }
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    border: 1px solid green;
+    margin: 20px;
+    padding: 0px 9px 20px;
+}

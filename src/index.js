@@ -13,13 +13,6 @@ const BasicExample = () => (
 
   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Home task</Link></li>
-        <li><Link to="/task/1">Task id</Link></li>
-      </ul>
-
-      <hr />
-
       <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
       <Route path="/task/:taskId" component={Task} />
