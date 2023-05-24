@@ -9,6 +9,7 @@ const Home = ({history}) => {
 
 
   const taskList = ['1','2','3.1','3.2','4.1', '4.2','4.3','5.1','5.2','6'];
+  const taskCategories =['1', '2', '3', '4', '5', '6'];
   
   const handleDoTask = (id) =>{
     console.log(!counter.includes === '3.1');
@@ -38,18 +39,26 @@ const Home = ({history}) => {
 
   <div>
     <h2>Home task</h2>
-    {error}
-    {counter}
-    { taskList.map((idTask)=>(
-      <> 
-      {counter.includes(idTask)?
-      `tarea ${idTask} realizada`
-      :(<button onClick={()=>{handleDoTask(idTask)}}>hacer tarea # {idTask}</button>)  
-      }      
-      </>
-    )
-    )}
-
+    <h1>{error}</h1>
+    {taskCategories.map( idCategory=>(
+      <div className='card'>
+        <h3>tarea # {idCategory}</h3>
+            { taskList.map((idTask)=>(
+              <>
+              {idCategory=== idTask[0] && (
+                <>
+                {counter.includes(idTask)?
+                `tarea ${idTask} realizada`
+                :(<button onClick={()=>{handleDoTask(idTask)}}>hacer tarea # {idTask}</button>)  
+                } 
+                </>
+              )}    
+              </>
+        )
+        )}
+      </div>
+    ))}
+  
     <button onClick={()=>{handleDoTask(55)}}>control</button>
 
   </div>
