@@ -1,16 +1,14 @@
-import { INC, DEC } from '../constants/counter';
+const counter = (state = 100, action) => {
+    switch(action.type){
+        case "INCREMENT":
+            return state + 1
+        case "DECREMENT":
+            return state - 1
+        case "RESET":
+            return state = 1
+        default: 
+            return state
+    }
+}
 
-const initState = 0;
-
-const reducer = (state = initState, action) => {
-  switch (action.type) {
-    case INC:
-      return state + 1;
-    case DEC:
-      return state - 1;
-    default:
-      return state;
-  }
-};
-
-export default reducer;
+export default counter

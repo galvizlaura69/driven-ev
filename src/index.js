@@ -1,20 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import store from "./store/store";
+
+
+import Home from './pages/Home';
+import Task from './pages/Task';
 import { Provider } from 'react-redux';
-
-
-import Home from './components/Home';
-import Counter from './containers/Counter';
-import Task from './components/Task';
+import store from './store/store';
 
 const BasicExample = () => (
   <Provider store={store}>
 
   <Router>
     <div>
-      <Counter/>
       <ul>
         <li><Link to="/">Home task</Link></li>
         <li><Link to="/task/1">Task id</Link></li>
