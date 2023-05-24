@@ -33,6 +33,7 @@ const Home = ({history}) => {
   return (
 
   <div>
+    <h1 className='title'>PRUEBA DESARROLLADOR REACT JS</h1>
     {error && 
       <div className='textError'>
         <p>{error}</p>

@@ -2,6 +2,13 @@ h1, p {
   font-family: Lato;
 }
 
+.title {
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  color: #556788;
+}
+
 .titleTask{
   font-size: 10px;
   color: #556788;
@@ -48,6 +55,12 @@ h1, p {
   margin: 6px;
   font-size: 10px;
   color: white;
+}
+
+.buttontask:hover {
+  background-color: white;
+  border: 1px solid #41719C;
+  color: #5B9BD5;
 }
 
 .cardFinish{
