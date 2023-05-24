@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import allActions from '../store/actions';
+import { useSelector} from 'react-redux';
 
 const Home = ({history}) => {
 
@@ -12,24 +11,20 @@ const Home = ({history}) => {
   const taskCategories =['1', '2', '3', '4', '5', '6'];
   
   const handleDoTask = (id) =>{
-    console.log(!counter.includes === '3.1');
-    console.log(!counter.includes === '3.1' && id === '3.2');
-
-    console.log('hace', id);
     if(counter.length=== 0 && id != '1'){
-      setError('debe empezar por el 1');
+      setError('Realice primero la tarea #1');
       return
     }
     if(!counter.includes('3.1') && id === '3.2'){
-      setError(`debe hacer primero 3.1 `);
+      setError(`Realice primero la tarea #3.1 `);
       return
     }
     if(!counter.includes('3.2') && id === '4.1'){
-      setError(`debe hacer primero 3.2 `);
+      setError(`Realice primero la tarea #3.2 `);
       return
     }
     if(!counter.includes('5.1') && id === '5.2'){
-      setError(`debe hacer primero 5.1 `);
+      setError(`Realice primero la tarea #5.1 `);
       return
     }
     history.push( `task/${id}`);
@@ -38,22 +33,21 @@ const Home = ({history}) => {
   return (
 
   <div>
-    <h2>Home task</h2>
     <h1>{error}</h1>
     {taskCategories.map( idCategory=>(
-      <div className='card'>
-        <h3>tarea # {idCategory}</h3>
+      <div key={idCategory} className='card'>
+        <h3>Tarea #{idCategory}</h3>
             { taskList.map((idTask)=>(
-              <>
+              <div key={idTask}>
               {idCategory=== idTask[0] && (
                 <>
                 {counter.includes(idTask)?
                 `tarea ${idTask} realizada`
-                :(<button onClick={()=>{handleDoTask(idTask)}}>hacer tarea # {idTask}</button>)  
+                :(<button onClick={()=>{handleDoTask(idTask)}}>Hacer tarea #{idTask}</button>)  
                 } 
                 </>
               )}    
-              </>
+              </div>
         )
         )}
       </div>
