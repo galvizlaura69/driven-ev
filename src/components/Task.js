@@ -1,13 +1,11 @@
 import React from 'react';
-//import { useParams } from 'react-router-dom';
 
-
-const Task = () => {
-  //const { taskId } = useParams();
-
+const Task = ({ match }) => {
+  const taskId= match.params.taskId;
   return (
    <div>
     <h2>task</h2>
+    {taskId}
   </div>
 )};
 
