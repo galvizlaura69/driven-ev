@@ -1,11 +1,9 @@
-const counter = (state = 100, action) => {
+const counter = (state = [], action) => {
     switch(action.type){
-        case "INCREMENT":
-            return state + 1
-        case "DECREMENT":
-            return state - 1
-        case "RESET":
-            return state = 1
+        case "ADD_TASK":
+            const tempList= state;
+            tempList.push(action.payload);
+            return tempList;
         default: 
             return state
     }

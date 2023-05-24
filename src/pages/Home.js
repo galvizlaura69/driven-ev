@@ -4,13 +4,18 @@ import allActions from '../store/actions';
 
 const Home = ({history}) => {
 
-  const dispatch = useDispatch();
   const counter = useSelector(state => state.counter);
 
+  const taskList = [1,2,3.1,3.2,4.1, 4.2,4.3,5.1,5.2,6];
+  let newTaskList= taskList;
+
+  counter.map( taskFinishId=>{
+    newTaskList = newTaskList.filter(id => id != taskFinishId);
+  })
+  console.log('newTaskList',newTaskList)
 
   const handleDoTask = (id) =>{
     console.log('hace', id);
-    dispatch(allActions.counterActions.increment());
     history.push( `task/${id}`);
 
   };
@@ -20,7 +25,10 @@ const Home = ({history}) => {
   <div>
     <h2>Home task</h2>
     {counter}
-    <button onClick={()=>{handleDoTask(123)}}>hacer tarea</button>
+    { newTaskList.map((idTask)=>(<button onClick={()=>{handleDoTask(idTask)}}>hacer tarea # {idTask}</button>)
+    )}
+
+    <button onClick={()=>{handleDoTask(55)}}>control</button>
 
   </div>
 )};

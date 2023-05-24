@@ -1,23 +1,10 @@
-const increment = () => {
+const addTask = (id) => {
     return {
-        type: "INCREMENT"
-    }
-}
-
-const decrement = () => {
-    return {
-        type: "DECREMENT"
-    }
-}
-
-const reset = () => {
-    return {
-        type: "RESET"
+        type: "ADD_TASK",
+        payload: id
     }
 }
 
 export default {
-    increment,
-    decrement,
-    reset
+    addTask
 }
