@@ -6,7 +6,6 @@ const Task = ({ match, history }) => {
   const handleFinishTask = (id)=>{
     console.log('finaliza', id);
     history.push("/home");
-    console.log('finalotroiza', id);
 
 
   };
