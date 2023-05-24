@@ -2,13 +2,60 @@ h1, p {
   font-family: Lato;
 }
 
+.titleTask{
+  font-size: 10px;
+}
 
+.textError{
+  background: #ff000042;
+  font-weight: 700;
+  color: red;
+  text-align: center;
+  border: 1px solid;
+}
+
+.categories{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  background: #0000ff61;
+  border: 1px solid blue;
+  margin-bottom: 10px;
+}
 .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 26%;
+  margin: 10px 30px;
+  background: #f5f5dcc2;
+  border: 1px solid #00bcd485;
+  border-radius: 20px;
+  padding-bottom: 10px;
+}
+
+.buttontask{
+  background: #7f8dd7;
+  border: 1px solid #0000ff;
+  border-radius: 15px;
+  padding: 6px 20px;
+  margin: 6px;
+  font-size: 10px;
+  color: white;
+}
+
+.cardFinish{
+    border: 1px solid #00bcd485;
+    background: #f5f5dcc2;
+    width: 50%;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45%;
-    border: 1px solid green;
-    margin: 20px;
-    padding: 0px 9px 20px;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: center;
 }

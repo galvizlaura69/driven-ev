@@ -11,11 +11,10 @@ const Task = ({ match, history }) => {
     dispatch(allActions.taskActions.addTask(id));
     history.push("/home");
   };
-  
+
   return (
-   <div>
-    <h2>task</h2>
-    <button onClick={()=>{handleFinishTask(taskId)}}>Finalizar tarea #{taskId} </button>
+   <div className='cardFinish'>
+    <button className='buttontask' onClick={()=>{handleFinishTask(taskId)}}>Finalizar tarea #{taskId} </button>
   </div>
 )};
 

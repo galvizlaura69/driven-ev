@@ -12,19 +12,19 @@ const Home = ({history}) => {
   
   const handleDoTask = (id) =>{
     if(task.length=== 0 && id != '1'){
-      setError('Realice primero la tarea #1');
+      setError('¡Realice primero la tarea #1!');
       return
     }
     if(!task.includes('3.1') && id === '3.2'){
-      setError(`Realice primero la tarea #3.1 `);
+      setError(`¡Realice primero la tarea #3.1!`);
       return
     }
     if(!task.includes('3.2') && id === '4.1'){
-      setError(`Realice primero la tarea #3.2 `);
+      setError(`¡Realice primero la tarea #3.2!`);
       return
     }
     if(!task.includes('5.1') && id === '5.2'){
-      setError(`Realice primero la tarea #5.1 `);
+      setError(`¡Realice primero la tarea #5.1!`);
       return
     }
     history.push( `task/${id}`);
@@ -33,18 +33,22 @@ const Home = ({history}) => {
   return (
 
   <div>
-    <p>{error}</p>
+    {error && 
+      <div className='textError'>
+        <p>{error}</p>
+     </div>}
+    <div className='categories'>
     {taskCategories.map( idCategory=>(
-      <div key={idCategory} className='card'>
-        <p>Tarea #{idCategory}</p>
-        <hr></hr>
+      <div key={idCategory} className="card">
+        <p className='titleTask'>TAREA #{idCategory}</p>
+        <div className='divider'></div>
             { taskList.map((idTask)=>(
               <div key={idTask}>
               {idCategory=== idTask[0] && (
                 <>
                 {task.includes(idTask)?
                 `Tarea #${idTask} finalizada`
-                :(<button onClick={()=>{handleDoTask(idTask)}}>Hacer tarea #{idTask}</button>)  
+                :(<button className={'buttontask'} onClick={()=>{handleDoTask(idTask)}}>Hacer tarea #{idTask}</button>)  
                 } 
                 </>
               )}    
@@ -53,6 +57,7 @@ const Home = ({history}) => {
         )}
       </div>
     ))}
+    </div>
   </div>
 )};
 
